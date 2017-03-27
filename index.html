@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Wheelo</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700%7COpen+Sans:300,400,600,600i,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="libs/remodal/remodal.css">
+	<link rel="stylesheet" href="libs/remodal/theme-remodal.css">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+</head>
+
+<body data-product='{ "price":135, "shipping": 20, "region": 1109  }'
+	  data-config='{ "form": "form", "topQuantity": 3, "product": 2048, "page": "landing" }'
+	  class="lang-en cz-wrapper">
+
+	<header>
+		<div class="sticky_header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 col-xs-12">
+						<div class="wrap_logo">
+							<a href="index.html#">
+								<img src="img/logo.png" alt="Wheelo">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-3 col-xs-9">
+						<div class="phone_wrap">
+							<a href="tel:778-222-333"> <i class="phone-icn"></i>  778-222-333</a>
+						</div>
+						<div class="mail_wrap mail-mobile">
+							<a href="mailto:info@wheello.com"><i class="mail-icn"></i> info@wheello.com</a>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3 mail-mobile-desctop">
+						<div class="mail_wrap">
+							<a href="mailto:info@wheello.com"><i class="mail-icn"></i> info@wheello.com</a>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-4 padding-none">
+						<div class="send_note">
+							<a href="index.html#" class="toform">Pošlete nám zprávu!</a>
+						</div>
+					</div>
+					<div class="col-md-1 col-sm-2 col-xs-3">
+						<div class="lang-block">
+							<a href="index.html#" class="lang-switcher">
+								<img src="img/cz-icon.png" alt=""> Cz
+							</a>
+							<div class="lang-switcher-wrapper" style="display: none;">
+								<div class="lang-close"></div>
+								<div class="lang">
+									<a href="index-en.html" class="lang-link"><img src="img/en-icon.png" alt=""> En</a>
+									<a href="index.html" class="lang-link"><img src="img/cz-icon.png" alt=""> Cz</a>
+									<div class="triangle triangle-bottom"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="about_and_order">
+			<div class="container">
+				<h1>Repasované i Nové díly z cele Evropy na jednom místě</h1>
+
+				<div class="row">
+					<div class="col-md-7 col-sm-7">
+						<div class="wrap_about_text">
+							<p>Největší databáze v České prepublice</p>
+							<p class="mobile-hide">Nové a použité autodíly</p>
+							<p>Nejlepší ceny na trhu</p>
+							<p>Více než <span>165,000 </span> náhradních dílů</p>
+						</div>
+						<div class="find_or_ask_links">
+							<a href="index.html#" class="find_header_link">Zadejte díl</a><!-- </a>&nbsp;OR &nbsp; --> <!-- <a href="#modal" class="ask_header_link">ASK SPECIALIST</a> -->
+							<span class="find-or">nebo</span>
+						</div>
+					</div>
+					<div class="col-md-5 col-sm-5">
+						<div class="wrap_form_header">
+								<p class="fz18">Zeptejte se našich mechaniků</p>
+							<form class="main-form">
+								<input id="your_name" type="text" placeholder="Jméno" required data-orderName>
+								<input id="phone_number" type="text" placeholder="Telefon" required data-orderPhone>
+								<textarea id="buyer_choose" name="" rows="3" placeholder="Otázka, Značka Vašeho auta, Rok" data-orderComment></textarea>
+								<button class="btn" type="submit" data-orderSubmit>Poslat žádost</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="counter">
+		<div class="counter_wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4">
+						<div class="inner_counter_wrap">
+							<h5>Spokojení zákazníci</h5>
+								<p class="repaired">Opravená auta v loňském roce</p>
+							<span id="1"></span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+
+						<div class="inner_counter_wrap">
+							<h5 class="inner-headline">Dílů v databaze</h5>
+							<p>Databáze aktualizovaná každý den.<br>
+								Dílů v databaze:</p>
+							<span id="32000"></span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="inner_counter_wrap">
+							<h5 class="inner-headline">Dodávky</h5>
+							<p class="delivery">Díly doručíme<br>
+								Domů i do Servisu</p>
+							<span>Do 5 ti dní</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="select_model">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="wrap_select_header">
+						<h2>Vyberte si svůj model vozu</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="car_select">
+				<div class="col-md-4 col-sm-4 mb-10">
+					<label>Značka:
+						<select name="make" id="formmake">
+							<option value="">Značka</option>
+						</select>
+					</label>
+				</div>
+				<div class="col-md-4 col-sm-4 mb-10">
+					<label>Značka Vašeho auta:
+						<select name="model" id="formmodel">
+							<option value="">Značka Vašeho auta</option>
+						</select>
+					</label>
+				</div>
+				<div class="col-md-4 col-sm-4 mb-10">
+					<label>Rok:
+						<select disabled id="year_car">
+							<option disabled selected>Rok Vašeho auta.....</option>
+							<option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option><option value="1904">1904</option><option value="1903">1903</option><option value="1902">1902</option><option value="1901">1901</option></select>
+						</select>
+					</label>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section class="choose_part" id="choose_p">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="choose-part-headline">Vyberte díl</h2>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_mirror">
+							<span>Osvětlení a zrcátka</span>
+							<img src="img/mirrors.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_interior">
+							<span>Interiér/stěrače/zástrčky/klimatizace</span>
+							<img src="img/interior.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_electronic">
+							<span>Elektrické díly</span>
+							<img src="img/electronic.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_transmission">
+							<span>Převodovka</span>
+							<img src="img/transmission.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_motor">
+							<span>Části motoru</span>
+							<img src="img/motor.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_delivery">
+							<span>&nbsp;&nbsp;Podvozek a řízení&nbsp;&nbsp;</span>
+							<img src="img/delivery.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_wheels">
+							<span>Kola a brzdové součástky</span>
+							<img src="img/wheels.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_body">
+							<span>Části karosérie, sklo</span>
+							<img src="img/body-parts.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="part_inner">
+						<a href="index.html#" class="choose_part_link" id="click_cooling">
+							<span>Chlazení / palivo / výfuk</span>
+							<img src="img/cooling.png" alt="Wheelo">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="subcategory_light_mirrors">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part" id="clear">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="selected-item">
+						<li><a href="index.html#">Osvětlení zavazadlového prostoru</a></li>
+						<li><a href="index.html#">Brzdové světlo </a></li>
+						<li><a href="index.html#">Zadní mlhovka</a></li>
+						<li><a href="index.html#">Přední světlo</a></li>
+						<li><a href="index.html#">Dálková světla</a></li>
+						<li><a href="index.html#">Osvětlení SPZ</a></li>
+						<li><a href="index.html#">Parkovací světla</a></li>
+						<li><a href="index.html#">Osvětlení značky</a></li>
+						<li><a href="index.html#">Dálková světla</a></li>
+						<li><a href="index.html#">Osvětlení SPZ</a></li>
+						<li><a href="index.html#">Parkovací světla</a></li>
+						<li><a href="index.html#">Osvětlení značky</a></li>
+						<li><a href="index.html#">Zadní světlo</a></li>
+						<li><a href="index.html#">Přední odrazka</a></li>
+						<li><a href="index.html#">Zpětná světla</a></li>
+						<li><a href="index.html#">Sklopné osvětlení řídícího panelu</a></li>
+						<li><a href="index.html#">Sklopné osvětlení motoru</a></li>
+						<li><a href="index.html#">Zpětné zrcátko </a></li>
+					</ul>
+				</div>
+			</div>
+			<!--<div class="row">-->
+				<!--<div class="col-md-12">-->
+					<!--<div class="wrap_bottom_form">-->
+						<!--<div class="value-input">-->
+							<!--<p class="form-headline">You choosed:</p>-->
+							<!--<b>Make:</b><span class="make-selection"></span>-->
+							<!--<b>Model:</b><span class="model-selection"></span>-->
+							<!--<b>Year:</b><span class="year-selection"></span>-->
+							<!--<b>Spare:</b><span class="spare-selection"></span>-->
+							<!--<p>Fill out the form and Our specialist will contact you</p>-->
+						<!--</div>-->
+					<!--<form>-->
+						<!--<textarea name="text" id="get-info" cols="30" rows="10"></textarea>-->
+						<!--<input type="text" placeholder="Your name">-->
+						<!--<input type="email" placeholder="Phone number">-->
+						<!--<button>Submit</button>-->
+					<!--</form>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
+		</div>
+	</section>
+	<section class="subcategory_interior_wipers_plugs_aircon">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<ul class="selected-item">
+						<li><a href="index.html#">AC-krabice </a></li>
+						<li><a href="index.html#">AC čerpadlo </a></li>
+						<li><a href="index.html#">Držák AC čerpadla</a></li>
+						<li><a href="index.html#">AC sada </a></li>
+						<li><a href="index.html#">Plynový pedál</a></li>
+						<li><a href="index.html#">Spínač akcelerátoru</a></li>
+						<li><a href="index.html#">Přívod vzduchu - plášť </a></li>
+						<li><a href="index.html#">Přívod vzduchu - přední část</a></li>
+						<li><a href="index.html#">Airbag - celý </a></li>
+						<li><a href="index.html#">Airbag - elektroinstalační krabice</a></li>
+						<li><a href="index.html#">Airbag - kroužek</a></li>
+						<li><a href="index.html#">Airbag - vysílač</a></li>
+						<li><a href="index.html#">Airbag - senzor</a></li>
+						<li><a href="index.html#">Airbag - elektrický svazek</a></li>
+						<li><a href="index.html#">Opěrka ruky</a></li>
+						<li><a href="index.html#">Popelník</a></li>
+						<li><a href="index.html#">Audio</a></li>
+						<li><a href="index.html#">Zadní sedadlo</a></li>
+						<li><a href="index.html#">Autokoberec</a></li>
+						<li><a href="index.html#">Zásuvka bezpečnostního pásu</a></li>
+						<li><a href="index.html#">Napínač bezpečnostního pásu</a></li>
+						<li><a href="index.html#">Kabel kapoty</a></li>
+						<li><a href="index.html#">Kryt zavazadlového prostoru</a></li>
+						<li><a href="index.html#">Koberec do zavazadlového prostoru</a></li>
+						<li><a href="index.html#">Brzdový pedál</a></li>
+						<li><a href="index.html#">Kabely - různé</a></li>
+						<li><a href="index.html#">Elektrické rozvody karburátoru</a></li>
+						<li><a href="index.html#">Katalyzátor</a></li>
+						<li><a href="index.html#">Stropní kryt</a></li>
+						<li><a href="index.html#">Stropní světlo</a></li>
+						<li><a href="index.html#">Centrální ovládací panel</a></li>
+						<li><a href="index.html#">Prostřední sedadlo</a></li>
+						<li><a href="index.html#">Zapalovač</a></li>
+						<li><a href="index.html#">Spojka</a></li>
+						<li><a href="index.html#">Kryt bez přístrojové desky</a></li>
+						<li><a href="index.html#">Potah na kryt zavazadlového prostoru</a></li>
+						<li><a href="index.html#">Držák na nápoje</a></li>
+						<li><a href="index.html#">Přístrojová deska</a></li>
+						<li><a href="index.html#">Přístrojová deska přední část</a></li>
+						<li><a href="index.html#">Přístrojová deska celá</a></li>
+						<li><a href="index.html#">Kryt přístrojové desky</a></li>
+						<li><a href="index.html#">Dveřní kryt - 2dvéřové</a></li>
+						<li><a href="index.html#">Zámek dveří</a></li>
+						<li><a href="index.html#">Dvousedačka</a></li>
+						<li><a href="index.html#">Elektrické hodiny</a></li>
+						<li><a href="index.html#">Motor - vytápění auta</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul class="selected-item">
+						<li><a href="index.html#">Odpařovací filtr</a></li>
+						<li><a href="index.html#">Ventilátor pro nasávání čerstvého vzduchu</a></li>
+						<li><a href="index.html#">Tryska pro nasávání čerstvého vzduch</a></li>
+						<li><a href="index.html#">Pohon předních stěračů </a></li>
+						<li><a href="index.html#">Přední sedadla - 2dvéřové</a></li>
+						<li><a href="index.html#">Přední sedadla - 4dvéřové</a></li>
+						<li><a href="index.html#">Převodovka - zámek zapalování</a></li>
+						<li><a href="index.html#">Palubní přihrádka</a></li>
+						<li><a href="index.html#">Klapka palubní přihrádky</a></li>
+						<li><a href="index.html#">Přihrádka na věci - rozdělovač</a></li>
+						<li><a href="index.html#">Hlavová opěrka</a></li>
+						<li><a href="index.html#">Ventilátor topení</a></li>
+						<li><a href="index.html#">Kryt ventilátoru topení</a></li>
+						<li><a href="index.html#">Hadice tepelné jednotky</a></li>
+						<li><a href="index.html#">Kapota</a></li>
+						<li><a href="index.html#">Běžný zámek zapalování</a></li>
+						<li><a href="index.html#">Přívodní trubka</a></li>
+						<li><a href="index.html#">Hever </a></li>
+						<li><a href="index.html#">Regulátor hladiny</a></li>
+						<li><a href="index.html#">Pohon stěračů světlomětů</a></li>
+						<li><a href="index.html#">Zámková vložka</a></li>
+						<li><a href="index.html#">Zajišťovací deska</a></li>
+						<li><a href="index.html#">Lišta přístrojové desky</a></li>
+						<li><a href="index.html#">Vnitřní lišty přístrojové desky </a></li>
+						<li><a href="index.html#">Lišta pedálu - celá</a></li>
+						<li><a href="index.html#">Kryt sloupku</a></li>
+						<li><a href="index.html#">Deska - přístrojová deska</a></li>
+						<li><a href="index.html#">Plášť vrtule</a></li>
+						<li><a href="index.html#">Rádio - přední deska</a></li>
+						<li><a href="index.html#">Rádio multi display </a></li>
+						<li><a href="index.html#">Stojan u přední kapoty, guma</a></li>
+						<li><a href="index.html#">Celý stěrač zadního skla</a></li>
+						<li><a href="index.html#">Pohon stěrače zadního skla</a></li>
+						<li><a href="index.html#">Spínač stěrače zadního skla</a></li>
+						<li><a href="index.html#">Zadní police - celá</a></li>
+						<li><a href="index.html#">Zadní police - podpěra</a></li>
+						<li><a href="index.html#">Vnitřní zpětné zrcátko </a></li>
+						<li><a href="index.html#">Otáčkoměr</a></li>
+						<li><a href="index.html#">Kabel obrazovky, dvoudvéřové</a></li>
+						<li><a href="index.html#">Ovladač obrazovky</a></li>
+						<li><a href="index.html#">Přední bezpečnostní pásy</a></li>
+						<li><a href="index.html#">Zadní bezpečnostní pásy</a></li>
+						<li><a href="index.html#">Opěrka mezi sedadla</a></li>
+						<li><a href="index.html#">Zadní police</a></li>
+						<li><a href="index.html#">Boční hodiny celé</a></li>
+						<li><a href="index.html#">Boční kryty zavazadlového prostoru</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul class="selected-item">
+						<li><a href="index.html#">Kolejnice posuvných dveří</a></li>
+						<li><a href="index.html#">Reproduktory</a></li>
+						<li><a href="index.html#">Tempomat</a></li>
+						<li><a href="index.html#">Tempomat - krabice</a></li>
+						<li><a href="index.html#">Tempomat - pohon </a></li>
+						<li><a href="index.html#">Tempomat - spínač</a></li>
+						<li><a href="index.html#">Tachometr </a></li>
+						<li><a href="index.html#">Motorový postřikovač</a></li>
+						<li><a href="index.html#">Postřikovač w - pohon </a></li>
+						<li><a href="index.html#">Řídící sloupek</a></li>
+						<li><a href="index.html#">Řídící sloupek celý</a></li>
+						<li><a href="index.html#">Kloub řízení</a></li>
+						<li><a href="index.html#">Volant - typ airbagu (bez airbagu) </a></li>
+						<li><a href="index.html#">Potah volantu</a></li>
+						<li><a href="index.html#">Zámek volantu</a></li>
+						<li><a href="index.html#">Podstavec zámku volantu</a></li>
+						<li><a href="index.html#">Střešní okno - nepůvodní</a></li>
+						<li><a href="index.html#">Střešní okno - původní </a></li>
+						<li><a href="index.html#">Pohon střešního okna </a></li>
+						<li><a href="index.html#">Části střešního okna</a></li>
+						<li><a href="index.html#">Sluneční clona</a></li>
+						<li><a href="index.html#">Spínač - combi </a></li>
+						<li><a href="index.html#">Spínač - osvětlení přístrojové desky</a></li>
+						<li><a href="index.html#">Spínač - dveře</a></li>
+						<li><a href="index.html#">Spínač - elektrické vyhřívání skel</a></li>
+						<li><a href="index.html#">Spínač - ventilátor</a></li>
+						<li><a href="index.html#">Spínač - nebezpečí</a></li>
+						<li><a href="index.html#">Spínač - kontrolka </a></li>
+						<li><a href="index.html#">Spínač - seřizovač hladiny</a></li>
+						<li><a href="index.html#">Spínač - světlo </a></li>
+						<li><a href="index.html#">Spínač - světlo - stěrač </a></li>
+						<li><a href="index.html#">Spínač - seřizovač světel</a></li>
+						<li><a href="index.html#">Spínač - světla </a></li>
+						<li><a href="index.html#">Spínač - vyhřívání sedadel</a></li>
+						<li><a href="index.html#">Spínač - střešní okno</a></li>
+						<li><a href="index.html#">Spínač - různé </a></li>
+						<li><a href="index.html#">Spínač - okna </a></li>
+						<li><a href="index.html#">Spínač - stěrač </a></li>
+						<li><a href="index.html#">Tachografy</a></li>
+						<li><a href="index.html#">Hydraulické čelo</a></li>
+						<li><a href="index.html#">Napínač rozodového řemene</a></li>
+						<li><a href="index.html#">Sada nářadí</a></li>
+						<li><a href="index.html#">Čalounění</a></li>
+						<li><a href="index.html#">Vnější zpětné zrcátko - spínač </a></li>
+						<li><a href="index.html#">Rameno stěrače</a></li>
+						<li><a href="index.html#">Propojení stěračů</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="subcategory_electronic_parts">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">ABS - elektroinstalační krabice</a></li>
+						<li><a href="index.html#">Snímač množství vzduchu </a></li>
+						<li><a href="index.html#">Ventil přívodu vzduchu</a></li>
+						<li><a href="index.html#">Anténa </a></li>
+						<li><a href="index.html#">Zesilovač antény</a></li>
+						<li><a href="index.html#">Anténový kabel</a></li>
+						<li><a href="index.html#">Protiskluzový systém - nádoba</a></li>
+						<li><a href="index.html#">Protiskluzový systém - trubky - hadice</a></li>
+						<li><a href="index.html#">Protiskluzový systém - čerpadlo</a></li>
+						<li><a href="index.html#">Protiskluzový systém - vysílač</a></li>
+						<li><a href="index.html#">Protiskluzový systém - jednotka</a></li>
+						<li><a href="index.html#">Centrální zamykání - čerpadlo</a></li>
+						<li><a href="index.html#">Centrální zamykání  - vysílač</a></li>
+						<li><a href="index.html#">Řídicí jednotka centrálního zamykání</a></li>
+						<li><a href="index.html#">Řídicí krabice</a></li>
+						<li><a href="index.html#">Řídící panel</a></li>
+						<li><a href="index.html#">Řídící vysílač</a></li>
+						<li><a href="index.html#">Elektrická cívka</a></li>
+						<li><a href="index.html#">Kompresorové čerpadlo</a></li>
+						<li><a href="index.html#">Různé ovladače</a></li>
+						<li><a href="index.html#">Ovladač</a></li>
+						<li><a href="index.html#">Kryt rozdělovače</a></li>
+						<li><a href="index.html#">Rozdělovač vstřikovacího čerpadla</a></li>
+						<li><a href="index.html#">Rozdělovač, elektroinstalační krabice </a></li>
+						<li><a href="index.html#">EGR ventil </a></li>
+						<li><a href="index.html#">Různé elektrické díly</a></li>
+						<li><a href="index.html#">Externí indikátor teploty</a></li>
+						<li><a href="index.html#">Přední mlhovka</a></li>
+						<li><a href="index.html#">Palivo - odpojovač</a></li>
+						<li><a href="index.html#">Tavná pojistka</a></li>
+						<li><a href="index.html#">Klakson</a></li>
+						<li><a href="index.html#">Řídící jednotka imobilizéru</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">Blinkr - přední </a></li>
+						<li><a href="index.html#">Blinkr - zadní </a></li>
+						<li><a href="index.html#">Vstřikování - počítač</a></li>
+						<li><a href="index.html#">Snímač klepání</a></li>
+						<li><a href="index.html#">Kontrolka - seřízení motoru </a></li>
+						<li><a href="index.html#">Řídící jednotka osvětlení </a></li>
+						<li><a href="index.html#">Music box s vysílačem</a></li>
+						<li><a href="index.html#">Navigace/části</a></li>
+						<li><a href="index.html#">Přední parkovací senzor</a></li>
+						<li><a href="index.html#">Zadní parkovací senzor</a></li>
+						<li><a href="index.html#">Řídící jednotka PDC (systém kontroly vzdálenosti)</a></li>
+						<li><a href="index.html#">Elektroinstalační krabice posilovače řízení</a></li>
+						<li><a href="index.html#">Vysílač - 12 - 24 v</a></li>
+						<li><a href="index.html#">Vysílač - přídavná dálková světla</a></li>
+						<li><a href="index.html#">Vysílač - elektrické ovládaní obrazovky</a></li>
+						<li><a href="index.html#">Vysílač - blinkr</a></li>
+						<li><a href="index.html#">Vysílač - vstřikování</a></li>
+						<li><a href="index.html#">Vysílač - světlo</a></li>
+						<li><a href="index.html#">Vysílač - nabíjení</a></li>
+						<li><a href="index.html#">Vysílač - předhřívání </a></li>
+						<li><a href="index.html#">Vysílač - normální start</a></li>
+						<li><a href="index.html#">Vysílač - časovač</a></li>
+						<li><a href="index.html#">Vysílač - různé</a></li>
+						<li><a href="index.html#">Vysílač - stěrač </a></li>
+						<li><a href="index.html#">Napájení obrazovky</a></li>
+						<li><a href="index.html#">Stop - start - motor</a></li>
+						<li><a href="index.html#">Stop - start spínač</a></li>
+						<li><a href="index.html#">Spínač škrticí klapky  </a></li>
+						<li><a href="index.html#">Kabelová síť - celá</a></li>
+						<li><a href="index.html#">Kabelová síť - přístrojová deska</a></li>
+						<li><a href="index.html#">Kabelová síť - přední</a></li>
+						<li><a href="index.html#">Kabelová síť - zadní</a></li>
+					</ul>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="subcategory_transmission">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">Automatická převodovka - elektroinstalační krabice</a></li>
+						<li><a href="index.html#">Části automatické převodovky</a></li>
+						<li><a href="index.html#">Skříň automatické převodovky</a></li>
+						<li><a href="index.html#">Kryt jednodílné (banjo) nápravy</a></li>
+						<li><a href="index.html#">Kryt jednodílné (banjo) nápravy - pohon 4x4</a></li>
+						<li><a href="index.html#">Skříň setrvačníku</a></li>
+						<li><a href="index.html#">Spojka - kryt </a></li>
+						<li><a href="index.html#">Spojka - ERM</a></li>
+						<li><a href="index.html#">Spojka - deska </a></li>
+						<li><a href="index.html#">Kabel spojky</a></li>
+						<li><a href="index.html#">Hlava válce spojky</a></li>
+						<li><a href="index.html#">Pracovní válec spojky</a></li>
+						<li><a href="index.html#">Diferenciální člen - přední pohon 4x4</a></li>
+						<li><a href="index.html#">Hnací hřídel - přední </a></li>
+						<li><a href="index.html#">Hnací hřídel - vnitřní zadní kloub</a></li>
+						<li><a href="index.html#">Hnací hřídel - vnější zadní kloub</a></li>
+						<li><a href="index.html#">Hnací hřídel - zadní </a></li>
+						<li><a href="index.html#">Hnací hřídel - vnitřní přední kloub</a></li>
+						<li><a href="index.html#">Hnací hřídel - vnější přední kloub</a></li>
+						<li><a href="index.html#">Expanzní nádoba</a></li>
+						<li><a href="index.html#">Setrvačník </a></li>
+						<li><a href="index.html#">Setrvačník+ spojka</a></li>
+						<li><a href="index.html#">Setrvačník - automatický</a></li>
+						<li><a href="index.html#">Setrvačníkový náboj kola - 4x4</a></li>
+						<li><a href="index.html#">Přední náprava - 4x4</a></li>
+						<li><a href="index.html#">Přední náboj kola</a></li>
+						<li><a href="index.html#">Převodovka - krycí deska</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">Převodovka - kabel</a></li>
+						<li><a href="index.html#">Převodovka - manžeta</a></li>
+						<li><a href="index.html#">Převodovka - hlavice </a></li>
+						<li><a href="index.html#">Převodovka - různé díly</a></li>
+						<li><a href="index.html#">Spínač převodovky</a></li>
+						<li><a href="index.html#">5stupňová řadicí páka</a></li>
+						<li><a href="index.html#">Automatická převodovka</a></li>
+						<li><a href="index.html#">Skřín převodovky - manuální </a></li>
+						<li><a href="index.html#">Skřín převodovky - člen</a></li>
+						<li><a href="index.html#">Skřín převodovky - podstavec</a></li>
+						<li><a href="index.html#">Skříň převodovky - spodní kryt</a></li>
+						<li><a href="index.html#">Řadicí páka</a></li>
+						<li><a href="index.html#">Řadicí páka - 5 stupňů</a></li>
+						<li><a href="index.html#">Řadicí páka - sloupek řízení</a></li>
+						<li><a href="index.html#">Řadicí páka - sloupek řízení 4 rychlosti</a></li>
+						<li><a href="index.html#">Hard disc vrtule</a></li>
+						<li><a href="index.html#">Hnací hřídel </a></li>
+						<li><a href="index.html#">Sestava zadní nápravy - celá </a></li>
+						<li><a href="index.html#">Sestava zadní nápravy - kus </a></li>
+						<li><a href="index.html#">Zadní náboj kola</a></li>
+						<li><a href="index.html#">Zadní hřídel - levá </a></li>
+						<li><a href="index.html#">Zadní hřídel - pravá </a></li>
+						<li><a href="index.html#">Zadní hřídel - stejné </a></li>
+						<li><a href="index.html#">Vřeteno - přední </a></li>
+						<li><a href="index.html#">Vřeteno - zadní </a></li>
+						<li><a href="index.html#">Převod - skříň převodovky</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="subcategory_motor">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<ul class="selected-item">
+						<li><a href="index.html#">Táhlo akcelerátoru</a></li>
+						<li><a href="index.html#">Vzduchový filtr</a></li>
+						<li><a href="index.html#">Vzduchová hadice</a></li>
+						<li><a href="index.html#">Alternátor </a></li>
+						<li><a href="index.html#">Podstravec alternátoru</a></li>
+						<li><a href="index.html#">Automatický konvertor</a></li>
+						<li><a href="index.html#">Vačkový hřídel</a></li>
+						<li><a href="index.html#">Řemenice na vačkový hřídel</a></li>
+						<li><a href="index.html#">Karburátor</a></li>
+						<li><a href="index.html#">Centrální tryska</a></li>
+						<li><a href="index.html#">Táhlo sytiče</a></li>
+						<li><a href="index.html#">Oběhové čerpadlo</a></li>
+						<li><a href="index.html#">Spojka - sestava </a></li>
+						<li><a href="index.html#">Řemenice klikové hřídele</a></li>
+						<li><a href="index.html#">Posilovač řemenice klikové hřídele</a></li>
+						<li><a href="index.html#">Kliková hřídel</a></li>
+						<li><a href="index.html#">Hlava válce</a></li>
+						<li><a href="index.html#">Rozdělovač</a></li>
+						<li><a href="index.html#">Měřič úspory paliva</a></li>
+						<li><a href="index.html#">Motor </a></li>
+						<li><a href="index.html#">Motor - detaily motoru</a></li>
+						<li><a href="index.html#">Motorový blok</a></li>
+						<li><a href="index.html#">Příčník motoru - přední</a></li>
+						<li><a href="index.html#">Kapota motoru</a></li>
+						<li><a href="index.html#">Podstavec motoru</a></li>
+						<li><a href="index.html#">Štít motoru</a></li>
+						<li><a href="index.html#">Stabilizátor motoru</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul class="selected-item">
+
+
+						<li><a href="index.html#">Přední řetěz</a></li>
+						<li><a href="index.html#">Převodovka - elektroinstalační krabice</a></li>
+						<li><a href="index.html#">Tepelná skříň levá</a></li>
+						<li><a href="index.html#">Tepelná skříň pravá</a></li>
+						<li><a href="index.html#">Ochrana proti teplu</a></li>
+						<li><a href="index.html#">Vysokotlaké čerpadlo</a></li>
+						<li><a href="index.html#">Vstřikovací filtr</a></li>
+						<li><a href="index.html#">Jednobodové vstřikování</a></li>
+						<li><a href="index.html#">Sada na vstřikování</a></li>
+						<li><a href="index.html#">Hadice intercooler </a></li>
+						<li><a href="index.html#">Nádoba regulátoru hladiny</a></li>
+						<li><a href="index.html#">Části regulátoru hladiny</a></li>
+						<li><a href="index.html#">Čerpadlo regulátoru hladiny</a></li>
+						<li><a href="index.html#">Ventil regulátoru hladiny</a></li>
+						<li><a href="index.html#">Sběrné potrubí</a></li>
+						<li><a href="index.html#">Přívod sběrného potrubí</a></li>
+						<li><a href="index.html#">Vývod sběrného potrubí</a></li>
+						<li><a href="index.html#">Tryska </a></li>
+						<li><a href="index.html#">Trubice trysky</a></li>
+						<li><a href="index.html#">Olejoměr w - tisk</a></li>
+						<li><a href="index.html#">Spínač tlaku oleje</a></li>
+						<li><a href="index.html#">Olejové čerpadlo</a></li>
+						<li><a href="index.html#">Chladič oleje</a></li>
+						<li><a href="index.html#">Chladič oleje - součástka</a></li>
+						<li><a href="index.html#">Chladič oleje- hadice</a></li>
+						<li><a href="index.html#">Měrka oleje - trubka</a></li>
+
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul class="selected-item">
+
+						<li><a href="index.html#">Olejová vana</a></li>
+						<li><a href="index.html#">Olejový filtr - podpěra </a></li>
+						<li><a href="index.html#">Panhardova tyč</a></li>
+						<li><a href="index.html#">Píst</a></li>
+						<li><a href="index.html#">Chladič posilovače řízení</a></li>
+						<li><a href="index.html#">Předhřívání</a></li>
+						<li><a href="index.html#">Tlakový akumulátor</a></li>
+						<li><a href="index.html#">Vstřikování vyrovnávávací tlakové nádoby</a></li>
+						<li><a href="index.html#">Regulátor tlaku</a></li>
+						<li><a href="index.html#">Elektromagnetický tlakový ventil</a></li>
+						<li><a href="index.html#">Kabel tachoměru</a></li>
+						<li><a href="index.html#">Nádoba postřikovače</a></li>
+						<li><a href="index.html#">Startér </a></li>
+						<li><a href="index.html#">Zdvih kola</a></li>
+						<li><a href="index.html#">Kryt termostatu</a></li>
+						<li><a href="index.html#">Kryt škrticí klapky</a></li>
+						<li><a href="index.html#">Kryt vačkového hřídele</a></li>
+						<li><a href="index.html#">Bodový senzor</a></li>
+						<li><a href="index.html#">Turbodmychadlo</a></li>
+						<li><a href="index.html#">Chladič turba</a></li>
+						<li><a href="index.html#">Turbo hadice</a></li>
+						<li><a href="index.html#">Vakuová měrka</a></li>
+						<li><a href="index.html#">Vakuové čerpadlo</a></li>
+						<li><a href="index.html#">Kryt ventilu</a></li>
+						<li><a href="index.html#">Obtokový ventil turbodmychadla</a></li>
+						<li><a href="index.html#">Vodní čerpadlo</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="subcategory_delivery">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">Kulový kloub</a></li>
+						<li><a href="index.html#">Příčník motoru - zadní</a></li>
+						<li><a href="index.html#">Sestava přední nápravy - různé části</a></li>
+						<li><a href="index.html#">Sestava přední nápravy - celá 4x4</a></li>
+						<li><a href="index.html#">Přední prut </a></li>
+						<li><a href="index.html#">Přední prut - celý </a></li>
+						<li><a href="index.html#">Přední tlumič </a></li>
+						<li><a href="index.html#">Přední tlumič - horní ložisko </a></li>
+						<li><a href="index.html#">Přední vinutá pružina - levá</a></li>
+						<li><a href="index.html#">Přední vinutá pružina - pravá</a></li>
+						<li><a href="index.html#">Přední vinutá pružina -  stejné </a></li>
+						<li><a href="index.html#">Přední listová pružina</a></li>
+						<li><a href="index.html#">Rameno řemenice</a></li>
+						<li><a href="index.html#">Blatníky</a></li>
+						<li><a href="index.html#">Oscilační tlumič</a></li>
+						<li><a href="index.html#">Válec posilovače řízení</a></li>
+						<li><a href="index.html#">Hadice posilovače řázení</a></li>
+						<li><a href="index.html#">Čerpadlo posilovače řízení</a></li>
+						<li><a href="index.html#">Stojan čerpadla posilovače řízení</a></li>
+						<li><a href="index.html#">Jímka posilovače řízení</a></li>
+						<li><a href="index.html#">Zadní prut</a></li>
+						<li><a href="index.html#">Zadní prut - celý </a></li>
+						<li><a href="index.html#">Zadní tlumič</a></li>
+						<li><a href="index.html#">Zadní pružina - spirálová </a></li>
+						<li><a href="index.html#">Přední pružina - listová</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">Tlumič - přední </a></li>
+						<li><a href="index.html#">Tlumič - zadní </a></li>
+						<li><a href="index.html#">Boční klapka - pravá</a></li>
+						<li><a href="index.html#">Součástka pružiny</a></li>
+						<li><a href="index.html#">Součástka pružiny - hydro</a></li>
+						<li><a href="index.html#">Sada pružin - snižovací</a></li>
+						<li><a href="index.html#">Stabilizátor - přední</a></li>
+						<li><a href="index.html#">Stabilizátor - zadní</a></li>
+						<li><a href="index.html#">Přední stabilizátor</a></li>
+						<li><a href="index.html#">Zadní stabilizátor</a></li>
+						<li><a href="index.html#">Řízení </a></li>
+						<li><a href="index.html#">Řídící jednotka řízení</a></li>
+						<li><a href="index.html#">Tlumič převodovky řízení</a></li>
+						<li><a href="index.html#">Řídící tyč</a></li>
+						<li><a href="index.html#">Hlava příčného táhla řízení</a></li>
+						<li><a href="index.html#">Torzní tyč - levá</a></li>
+						<li><a href="index.html#">Torzní tyč - pravá</a></li>
+						<li><a href="index.html#">Torzní tyč - stejné</a></li>
+						<li><a href="index.html#">Variátor - přední</a></li>
+						<li><a href="index.html#">Variátor - zadní</a></li>
+						<li><a href="index.html#">Rovběžníková náprava - spodní přední  </a></li>
+						<li><a href="index.html#">Rovběžníková náprava - horní přední</a></li>
+						<li><a href="index.html#">Rovběžníková náprava - zadní</a></li>
+						<li><a href="index.html#">Rovběžníková náprava - horní zadní</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="subcategory_wheels">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">A l b - brzdové díly</a></li>
+						<li><a href="index.html#">A l b - čerpadlo</a></li>
+						<li><a href="index.html#">Abs - brzdové díly</a></li>
+						<li><a href="index.html#">Abs - čerpadlo </a></li>
+						<li><a href="index.html#">Abs - senzor </a></li>
+						<li><a href="index.html#">Automatika - hadice - trubky</a></li>
+						<li><a href="index.html#">Brzda - posilovač </a></li>
+						<li><a href="index.html#">Brzda - hlava válce </a></li>
+						<li><a href="index.html#">Brzda - zadní ventil</a></li>
+						<li><a href="index.html#">Brzdový třmen </a></li>
+						<li><a href="index.html#">Brzdový třmen - přední levý </a></li>
+						<li><a href="index.html#">Brzdový třmen - přední pravý</a></li>
+						<li><a href="index.html#">Brzdový třmen -zadní levý</a></li>
+						<li><a href="index.html#">Brzdový třmen - zadní pravý</a></li>
+						<li><a href="index.html#">Brzdový třmen - větraný</a></li>
+						<li><a href="index.html#">Brzdový třmen - větraný zadní levý</a></li>
+						<li><a href="index.html#">Brzdový třmen - větraný zadní pravý</a></li>
+
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">Brzdový třmen - větraný přední levý </a></li>
+						<li><a href="index.html#">Brzdový třmen - větraný přední pravý </a></li>
+						<li><a href="index.html#">Brzdová destička</a></li>
+						<li><a href="index.html#">Přední brzdové lanko</a></li>
+						<li><a href="index.html#">Zadní brzdové lanko</a></li>
+						<li><a href="index.html#">Regulátor brzd</a></li>
+						<li><a href="index.html#">Přední ochrana proti prachu</a></li>
+						<li><a href="index.html#">Zadní ochrana proti prachu</a></li>
+						<li><a href="index.html#">Ruční brzda</a></li>
+						<li><a href="index.html#">Ruční brzda - pedál</a></li>
+						<li><a href="index.html#">Ráfky - doplňky </a></li>
+						<li><a href="index.html#">Ráfky </a></li>
+						<li><a href="index.html#">Ráfky - hliník </a></li>
+						<li><a href="index.html#">Ráfky - sport</a></li>
+						<li><a href="index.html#">Náhradní pneumatika</a></li>
+						<li><a href="index.html#">Válec kolové brzdy</a></li>
+						<li><a href="index.html#">Uzly kol - šrouby </a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="subcategory_body">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<ul class="selected-item">
+						<li><a href="index.html#">Přívod vzduchu - zadní</a></li>
+						<li><a href="index.html#">Lišta proti poškrábání</a></li>
+						<li><a href="index.html#">Znaky</a></li>
+						<li><a href="index.html#">Kryt baterie</a></li>
+						<li><a href="index.html#">Spodní část zavazadlového prostoru</a></li>
+						<li><a href="index.html#">Roh nárazníku</a></li>
+						<li><a href="index.html#">Klakson nárazníku</a></li>
+						<li><a href="index.html#">Posilovač nárazníku</a></li>
+						<li><a href="index.html#">Centrální zámek </a></li>
+						<li><a href="index.html#">Centrální zámek - části</a></li>
+						<li><a href="index.html#">Ozdobná lišta</a></li>
+						<li><a href="index.html#">Ozdobná lišta - dveře</a></li>
+						<li><a href="index.html#">Ozdobná lišta - křídlo</a></li>
+						<li><a href="index.html#">Dveře </a></li>
+						<li><a href="index.html#">Spodní dveřní závěsy</a></li>
+						<li><a href="index.html#">Horní dveřní závěsy</a></li>
+						<li><a href="index.html#">Gumová dveřní lišta - 4dvéřový</a></li>
+						<li><a href="index.html#">Dveřní zarážka</a></li>
+						<li><a href="index.html#">Okenní clona ve dveřích</a></li>
+						<li><a href="index.html#">Rukojeť dveří </a></li>
+						<li><a href="index.html#">Odkapávací lišta</a></li>
+						<li><a href="index.html#">Předek -celý</a></li>
+						<li><a href="index.html#">Přední kapota</a></li>
+						<li><a href="index.html#">Přední nárazník- celý</a></li>
+						<li><a href="index.html#">Přední nárazník - stojan na pneumatiku</a></li>
+
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul class="selected-item">
+						<li><a href="index.html#">Přední nárazník - neošetřený </a></li>
+						<li><a href="index.html#">Přední plášť</a></li>
+						<li><a href="index.html#">Tlumič přední kapoty </a></li>
+						<li><a href="index.html#">Přední deska</a></li>
+						<li><a href="index.html#">Přední deska</a></li>
+						<li><a href="index.html#">Přední spoiler</a></li>
+						<li><a href="index.html#">Přední levý blatník</a></li>
+						<li><a href="index.html#">Přední pravý blatník</a></li>
+						<li><a href="index.html#">Víčko nádrže</a></li>
+						<li><a href="index.html#">Rukojeť - vnější </a></li>
+						<li><a href="index.html#">Rukojeť - vnitřní </a></li>
+						<li><a href="index.html#">Rukojeť - posuvná</a></li>
+						<li><a href="index.html#">Hardtop</a></li>
+						<li><a href="index.html#">Závěsy - posuvné dveře</a></li>
+						<li><a href="index.html#">Zámek kapoty</a></li>
+						<li><a href="index.html#">Kryt náboje kola</a></li>
+						<li><a href="index.html#">Závěsy náboje kola</a></li>
+						<li><a href="index.html#">Plastové vnitřní křídlo</a></li>
+						<li><a href="index.html#">Zadní nárazník - celý </a></li>
+						<li><a href="index.html#">Zadní nárazník - stojan na pneumatiku</a></li>
+						<li><a href="index.html#">Zadní nárazník - neošetřený </a></li>
+						<li><a href="index.html#">Zadní kapota</a></li>
+						<li><a href="index.html#">Lanko zadní kapoty</a></li>
+						<li><a href="index.html#">Závěsy zadní kapoty</a></li>
+
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<ul class="selected-item">
+						<li><a href="index.html#">Tlumič zadní kapoty </a></li>
+						<li><a href="index.html#">Zadní panel w - světla</a></li>
+						<li><a href="index.html#">Clona zadního bočního skla</a></li>
+						<li><a href="index.html#">Zadní spoiler</a></li>
+						<li><a href="index.html#">Clona zadního skla</a></li>
+						<li><a href="index.html#">Levé zpětné zrcátko</a></li>
+						<li><a href="index.html#">Pravé zpětné zrcátko</a></li>
+						<li><a href="index.html#">Hagusy</a></li>
+						<li><a href="index.html#">Různé gumové lišty</a></li>
+						<li><a href="index.html#">Boční kryty 4dvéřové</a></li>
+						<li><a href="index.html#">Boční dveře - levé</a></li>
+						<li><a href="index.html#">Boční dveře- pravé</a></li>
+						<li><a href="index.html#">Boční klapka - levá</a></li>
+						<li><a href="index.html#">Boční spoiler</a></li>
+						<li><a href="index.html#">Posuvné dveře - levé</a></li>
+						<li><a href="index.html#">Posuvné dveře - pravé</a></li>
+						<li><a href="index.html#">Náhradní kolo - podstavec </a></li>
+						<li><a href="index.html#">Ochranná deska proti kamenům</a></li>
+						<li><a href="index.html#">Panel nákladního prostoru - neošetřený</a></li>
+						<li><a href="index.html#">Dveře nákladního prostoru</a></li>
+						<li><a href="index.html#">Torpédo deska</a></li>
+						<li><a href="index.html#">Tažná koule</a></li>
+						<li><a href="index.html#">Trojúhelníková okenní clona</a></li>
+						<li><a href="index.html#">Podstavec klenby křídla</a></li>
+						<li><a href="index.html#"Vyložení křídla</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="subcategory_cooling">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="back_arrow">
+						<a href="index.html#" class="back_to_choose_part">&#8617; BACK</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">Katalyzátor/ Filtr pevných částic </a></li>
+						<li><a href="index.html#">Čerpadlo katalyzátoru</a></li>
+						<li><a href="index.html#">Dieselové čerpadlo</a></li>
+						<li><a href="index.html#">Podstavec dieselového čerpadla</a></li>
+						<li><a href="index.html#">Přívodní výfukové potrubí</a></li>
+						<li><a href="index.html#">Podávací čerpadlo</a></li>
+						<li><a href="index.html#">Přední mřížka</a></li>
+						<li><a href="index.html#">Palivový filtr</a></li>
+						<li><a href="index.html#">Palivové čerpadlo</a></li>
+						<li><a href="index.html#">Regulace ohřívání </a></li>
+						<li><a href="index.html#">Odolnost vůči teplu</a></li>
+						<li><a href="index.html#">Regulátor ohřívání</a></li>
+						<li><a href="index.html#">Kohoutek ohřívání</a></li>
+						<li><a href="index.html#">Ohřívací jednotka - plášť</a></li>
+						<li><a href="index.html#">Ohřívací jednotka - celá</a></li>
+						<li><a href="index.html#">Tepelný element</a></li>
+
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<ul class="selected-item">
+						<li><a href="index.html#">Lambda sonda </a></li>
+						<li><a href="index.html#">Chladič </a></li>
+						<li><a href="index.html#">Chladič - zásobník vzduchu vnitřní</a></li>
+						<li><a href="index.html#">Chladič - hadice </a></li>
+						<li><a href="index.html#">Chladič - trubky</a></li>
+						<li><a href="index.html#">Chladič - senzor</a></li>
+						<li><a href="index.html#">Elektrický ventilátor chladiče</a></li>
+						<li><a href="index.html#">Víko chladiče  </a></li>
+						<li><a href="index.html#">Nádrž </a></li>
+						<li><a href="index.html#">Nádrž - potrubí</a></li>
+						<li><a href="index.html#">Krytka nádrže </a></li>
+						<li><a href="index.html#">Příslušenství nádrže </a></li>
+						<li><a href="index.html#">Palivoměr</a></li>
+						<li><a href="index.html#">Páska nádrže</a></li>
+						<li><a href="index.html#">Ventilátor</a></li>
+						<li><a href="index.html#">Automatický ventilátor</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="form-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="wrap_bottom_form">
+						<div class="value-input">
+							<p class="form-headline">Vybrali jste:</p>
+							<b>Značka</b><span class="make-selection"></span>
+							<b>Značka Vašeho auta:</b><span class="model-selection"></span>
+							<b>Rok:</b><span class="year-selection"></span>
+							<b>Náhradní díly</b><span class="spare-selection"></span>
+							<p class="form-info">Vyplňte formulář a náš specialista Vás bude kontaktovat.</p>
+						</div>
+						<form>
+							<textarea name="text" id="get-info" cols="30" rows="4" data-orderComment></textarea>
+							<input type="text" placeholder="Jméno" data-orderName>
+							<input type="text" placeholder="Telefon" data-orderPhone>
+							<button data-orderSubmit>Potvrdit</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="guarantees guarantees-cz">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Proč zakoupit u nás</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 col-sm-4">
+					<div class="inner_guarantees_wrap">
+						<h5 class="inner-headline-padding">Záruka</h5>
+						<p class="cz-text">Dáváme záruku<br>
+							na kontabilitu dílu
+						</p>
+						<span class="span-padding">10 dní</span>
+					</div>
+				</div>
+				<div class="col-sm-4 col-sm-4">
+					<div class="inner_guarantees_wrap">
+						<h5 class="headline-padding">Pouze originální náhradní díly</h5>
+						<p class="cz-text">Nejlepší volba <br>
+							fpro Váš vůz.</p>
+						<span>Nové/ Použité Náhradní díly</span>
+					</div>
+				</div>
+				<div class="col-sm-4 col-sm-4">
+					<div class="inner_guarantees_wrap">
+						<h5>Profesionální podpora</h5>
+						<p>Naši specialisté
+							<br>
+							pomohou najít nejlepší řešení</p>
+						<span class="span-padding">7 Dní v týdnu</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		Všechna práva vyhrazena &copy; 2017
+		<div class="remodal" data-remodal-id="modal">
+			<button data-remodal-action="close" class="remodal-close"></button>
+			<h1>Děkujeme!</h1>
+			<p>V nejbližší době Vám zavolá náš operátor na číslo, které jste uvedli, aby zakázku potvrdil a domluvil se s Vámi na podmínkách dodání zásilky, které Vám budou vyhovovat.</p>
+			<button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+	<script src="js/scripts.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<script src="js/countUp.js"></script>
+	<script src="libs/remodal/remodal.js"></script>
+	<script>
+        jQuery(document).ready(function($){
+
+            $('span.text select').change(function(){
+                $(this).siblings('.value').text($(this).find('option[value="'+$(this).val()+'"]').text());
+            });
+
+            for ( make in cars )
+            {
+                $('#formmake').append('<option value="'+make+'">'+make+'</option>');
+            }
+
+            $('#formmake').change(function(){
+                var val = $(this).val();
+                $('#formmodel').html('<option value="">Model</option>');
+                for ( i in cars[val] )
+                {
+                    $('#formmodel').append('<option value="'+cars[val][i]+'">'+cars[val][i]+'</option>');
+                }
+                $('#formmodel').append('<option value="Other">- Jiné -</option>');
+            });
+
+
+        });
+	</script>
+
+	<script>
+        var _gaq = _gaq || [];
+
+        _gaq.push(['_setAccount', 'UA-45631401-16']);
+        _gaq.push(['_setDomainName', 'auto']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+	</script>
+</body>
+</html>
